@@ -19,12 +19,26 @@ CKEDITOR.plugins.add('magento_imagebrowser', {
                     ev.data.definition.dialog._.element.$.appendChild(receiver);
 
                     var cfg = ev.editor.config.mageCfg;
-                    var url = cfg.browser_window_url + 'target_element_id/' + receiver.id + '/' + 'store/' + cfg.store_id + '/';
-                    MediabrowserUtility.openDialog(url, cfg.browser_window_width, cfg.browser_window_height, cfg.browser_window_title, {
+
+                    var typeTitle;
+                    var storeId = cfg.store_id !== null ? cfg.store_id : 0;
+                    var wUrl = cfg.files_browser_window_url +
+                        'target_element_id/' + receiver.id + '/' +
+                        'store/' + storeId + '/';
+
+                    if (typeof(cfg.type) != 'undefined' && cfg.type != "") {
+                        typeTitle = 'image' == o.type ? Translator.translate('Insert Image...') : this.translate('Insert Media...');
+                        wUrl = wUrl + "type/" + o.type + "/";
+                    } else {
+                        typeTitle = Translator.translate('Insert File...');
+                    }
+
+                    MediabrowserUtility.openDialog(wUrl, cfg.files_browser_window_width, cfg.files_browser_window_height, typeTitle, {
                         onBeforeShow: function(win) {
                             win.element.setStyle({zIndex: 300200});
                         }
                     });
+
                 }
             }
         });

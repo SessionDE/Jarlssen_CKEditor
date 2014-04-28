@@ -1,6 +1,9 @@
-code							app/code/community/Jarlssen/CKEditor
-Jarlssen_CKEditor.xml			app/etc/modules/Jarlssen_CKEditor.xml
-ckeditor						js/ckeditor
-plugins/magento_imagebrowser	js/ckeditor/plugins/magento_imagebrowser
-plugins/magento_variable		js/ckeditor/plugins/magento_variable
-plugins/magento_widget			js/ckeditor/plugins/magento_widget
+code                            app/code/community/Jarlssen/CKEditor
+Jarlssen_CKEditor.xml           app/etc/modules/Jarlssen_CKEditor.xml
+ckeditor                        js/ckeditor
+plugins/magento_imagebrowser    js/ckeditor/plugins/magento_imagebrowser
+plugins/magento_variable        js/ckeditor/plugins/magento_variable
+plugins/magento_widget          js/ckeditor/plugins/magento_widget
+Varien/Editor.php               app/code/local/Varien/Data/Form/Element/Editor.php
+layout/ckeditor.xml             app/design/adminhtml/default/default/layout/ckeditor.xml
+template/ckeditor_js.phtml      app/design/adminhtml/default/default/template/catalog/wysiwyg/ckeditor_js.phtml

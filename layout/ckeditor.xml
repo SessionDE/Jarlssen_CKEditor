@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_catalog_product_new>
+        <reference name="js">
+            <block type="core/template" template="catalog/wysiwyg/ckeditor_js.phtml"/>
+        </reference>
+    </adminhtml_catalog_product_new>
+    <adminhtml_catalog_product_edit>
+        <reference name="js">
+            <block type="core/template" template="catalog/wysiwyg/ckeditor_js.phtml"/>
+        </reference>
+    </adminhtml_catalog_product_edit>
+    <adminhtml_catalog_category_edit>
+        <reference name="js">
+            <block type="core/template" template="catalog/wysiwyg/ckeditor_js.phtml"/>
+        </reference>
+    </adminhtml_catalog_category_edit>
+</layout>

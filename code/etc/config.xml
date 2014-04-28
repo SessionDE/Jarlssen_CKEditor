@@ -9,17 +9,50 @@
         <blocks>
             <adminhtml>
                 <rewrite>
-                    <cms_page_edit_tab_content>Jarlssen_CKEditor_Block_Adminhtml_Cms_Page_Edit_Tab_Content</cms_page_edit_tab_content>
-                    <cms_block_edit_form>Jarlssen_CKEditor_Block_Adminhtml_Cms_Block_Edit_Form</cms_block_edit_form>
+                    <!--<cms_page_edit_tab_content>Jarlssen_CKEditor_Block_Adminhtml_Cms_Page_Edit_Tab_Content</cms_page_edit_tab_content>-->
+                    <!--<cms_block_edit_form>Jarlssen_CKEditor_Block_Adminhtml_Cms_Block_Edit_Form</cms_block_edit_form>-->
+                    <!--<catalog_helper_form_wysiwyg_content>Jarlssen_CKEditor_Block_Adminhtml_Catalog_Helper_Form_Wysiwyg_Content</catalog_helper_form_wysiwyg_content>-->
                 </rewrite>
             </adminhtml>
         </blocks>
+        <events>
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <jarlssen_ckeditor>
+                        <class>Jarlssen_CKEditor_Model_Observer</class>
+                        <method>addCKEditorHeadJs</method>
+                    </jarlssen_ckeditor>
+                </observers>
+            </core_block_abstract_to_html_before>
+        </events>
 
         <models>
             <jarlssen_ckeditor>
                 <class>Jarlssen_CKEditor_Model</class>
             </jarlssen_ckeditor>
+            <!--<cms>-->
+            <!--<rewrite>-->
+            <!--<wysiwyg_config>Jarlssen_CKEditor_Model_Config</wysiwyg_config>-->
+            <!--</rewrite>-->
+            <!--</cms>-->
         </models>
+
     </global>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <jarlssen_ckeditor>
+                    <file>ckeditor.xml</file>
+                </jarlssen_ckeditor>
+            </updates>
+        </layout>
+    </adminhtml>
+    <default>
+
+        <admin>
+
+        </admin>
+    </default>
 </config>
 

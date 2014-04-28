@@ -16,9 +16,7 @@ CKEDITOR.plugins.add( 'magento_variable', {
         };
 
         Variables.insertVariable = function(vars) {
-            console.log(MagentovariablePlugin);
             Variables.closeDialogWindow(Variables.dialogWindow);
-            console.log(vars);
             doInsert(Variables.textareaElementId, vars);
         };
 
@@ -39,12 +37,10 @@ CKEDITOR.plugins.add( 'magento_variable', {
             },
 
             insert: function() {
-                console.log(editor.config);
                 // todo pick by name
                 var url = editor.config.mageCfg.plugins[0].options.url;
                 MagentovariablePlugin.loadChooser(url, this);
             }
-
         });
     }
 

@@ -1,0 +1,14 @@
+<script type="text/javascript">
+    catalogWysiwygEditor.okDialogWindow = function(dialogWindow) {
+        if (dialogWindow.options.firedElementId) {
+            var editor = CKEDITOR.instances[dialogWindow.options.firedElementId + '_editor'];
+            $(dialogWindow.options.firedElementId).value = editor.getData();
+        }
+        this.closeDialogWindow(dialogWindow);
+    }
+    catalogWysiwygEditor.closeDialogWindow = function(dialogWindow) {
+        dialogWindow.close();
+        Windows.overlayShowEffectOptions = this.overlayShowEffectOptions;
+        Windows.overlayHideEffectOptions = this.overlayHideEffectOptions;
+    }
+</script>

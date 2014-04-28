@@ -1,0 +1,8 @@
+span.magentovariable span {
+    display: none;
+}
+span.magentovariable:after {
+    font-weight: bold;
+    background-color: #eeee66;
+    content: attr(title);
+}

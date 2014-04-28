@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Jarlssen_CKEditor>
+            <version>0.1</version>
+        </Jarlssen_CKEditor>
+    </modules>
+    <global>
+        <blocks>
+            <adminhtml>
+                <rewrite>
+                    <cms_page_edit_tab_content>Jarlssen_CKEditor_Block_Adminhtml_Cms_Page_Edit_Tab_Content</cms_page_edit_tab_content>
+                    <cms_block_edit_form>Jarlssen_CKEditor_Block_Adminhtml_Cms_Block_Edit_Form</cms_block_edit_form>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+
+        <models>
+            <jarlssen_ckeditor>
+                <class>Jarlssen_CKEditor_Model</class>
+            </jarlssen_ckeditor>
+        </models>
+    </global>
+</config>
+

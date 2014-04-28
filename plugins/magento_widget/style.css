@@ -1,0 +1,8 @@
+span.magentowidget span {
+    display: none;
+}
+span.magentowidget:after {
+    font-weight: bold;
+    background-color: #eeee66;
+    content: attr(title);
+}

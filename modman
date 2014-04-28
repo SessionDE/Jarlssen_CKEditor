@@ -1,0 +1,6 @@
+code							app/code/community/Jarlssen/CKEditor
+Jarlssen_CKEditor.xml			app/etc/modules/Jarlssen_CKEditor.xml
+ckeditor						js/ckeditor
+plugins/magento_imagebrowser	js/ckeditor/plugins/magento_imagebrowser
+plugins/magento_variable		js/ckeditor/plugins/magento_variable
+plugins/magento_widget			js/ckeditor/plugins/magento_widget

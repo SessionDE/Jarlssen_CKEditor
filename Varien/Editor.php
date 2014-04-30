@@ -37,6 +37,7 @@ CKEDITOR.replace('{$this->getHtmlId()}', {
     $remove
     extraPlugins: '$extraPlugins',
     contentsCss: [$css],
+    entities: false,
     mageCfg: $config
 });
 //]]>
